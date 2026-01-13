@@ -1,0 +1,41 @@
+{
+  "common": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "loading": "Loading...",
+    "error": "Error",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "welcome": "Welcome"
+  },
+  "auth": {
+    "signIn": {
+      "title": "Sign In",
+      "emailPlaceholder": "you@example.com",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Sign In",
+      "submitting": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up",
+      "error": "An error occurred during sign in"
+    },
+    "signUp": {
+      "title": "Sign Up",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "you@example.com",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Sign Up",
+      "submitting": "Signing up...",
+      "hasAccount": "Already have an account?",
+      "signInLink": "Sign in",
+      "error": "An error occurred during sign up"
+    },
+    "pleaseSignIn": "Please sign in to continue",
+    "loggedInAs": "Logged in as"
+  },
+  "home": {}
+}

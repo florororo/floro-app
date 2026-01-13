@@ -1,0 +1,41 @@
+{
+  "common": {
+    "signIn": "Iniciar sesión",
+    "signUp": "Registrarse",
+    "signOut": "Cerrar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "name": "Nombre",
+    "loading": "Cargando...",
+    "error": "Error",
+    "submit": "Enviar",
+    "submitting": "Enviando...",
+    "welcome": "Bienvenido"
+  },
+  "auth": {
+    "signIn": {
+      "title": "Iniciar sesión",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "submit": "Iniciar sesión",
+      "submitting": "Iniciando sesión...",
+      "noAccount": "¿No tienes una cuenta?",
+      "signUpLink": "Registrarse",
+      "error": "Ocurrió un error al iniciar sesión"
+    },
+    "signUp": {
+      "title": "Registrarse",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "submit": "Registrarse",
+      "submitting": "Registrando...",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signInLink": "Iniciar sesión",
+      "error": "Ocurrió un error al registrarse"
+    },
+    "pleaseSignIn": "Por favor inicia sesión para continuar",
+    "loggedInAs": "Sesión iniciada como"
+  },
+  "home": {}
+}
