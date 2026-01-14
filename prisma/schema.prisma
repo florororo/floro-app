@@ -11,5 +11,5 @@ generator client {
 // https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#string
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
 }
