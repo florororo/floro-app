@@ -11,7 +11,8 @@ export default getRequestConfig(async () => {
   try {
     const session = await getSession();
     if (session?.user?.id) {
-      const user = await db.user.findUnique({
+    
+       const user = await db.user.findUnique({
         where: { id: session.user.id },
         select: { locale: true },
       });
@@ -22,7 +23,7 @@ export default getRequestConfig(async () => {
         locales.includes(userLocale as Locale)
       ) {
         locale = userLocale as Locale;
-      }
+      } 
     }
   } catch {
     // Session might not be available, continue to cookie/browser detection
