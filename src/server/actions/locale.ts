@@ -36,7 +36,7 @@ export async function detectBrowserLocale(): Promise<Locale> {
       // Parse Accept-Language header (e.g., "en-US,en;q=0.9,es;q=0.8")
       const languages = acceptLanguage
         .split(",")
-        .map((lang) => lang.split(";")[0].trim().toLowerCase().split("-")[0]);
+        .map((lang) => lang.split(";")[0]?.trim().toLowerCase().split("-")[0]);
 
       // Find first matching locale
       const detectedLocale = locales.find((loc) =>

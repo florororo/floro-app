@@ -1,10 +1,9 @@
 import "~/styles/globals.css";
-
-import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getLocale } from "next-intl/server";
 import { Geist } from "next/font/google";
-
+import { NextIntlClientProvider } from "next-intl";
 import { TRPCReactProvider } from "~/trpc/react";
+
 
 const geist = Geist({
   subsets: ["latin"],
@@ -20,8 +19,8 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={geist.variable}>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          <TRPCReactProvider>{children}</TRPCReactProvider>
+      <NextIntlClientProvider messages={messages}>
+        <TRPCReactProvider>{children}</TRPCReactProvider>
         </NextIntlClientProvider>
       </body>
     </html>
