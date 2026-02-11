@@ -24,10 +24,10 @@ export default function SignupPage() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const browserLang =
-        navigator.language ||
-        (navigator as { userLanguage?: string }).userLanguage ||
+        navigator.language ??
+        (navigator as { userLanguage?: string }).userLanguage ??
         "en";
-      const langCode = browserLang.split("-")[0].toLowerCase();
+      const langCode = browserLang.split("-")[0]?.toLowerCase() ?? "en";
       const matchedLocale = locales.find(
         (loc) => loc.toLowerCase() === langCode,
       );
