@@ -14,13 +14,13 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      <main className="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
+      <main className="text-dark-900 relative flex min-h-screen flex-col items-center justify-center">
         <div className="absolute top-4 right-4 z-10">
           <LocaleSwitcher />
         </div>
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
           <div className="flex flex-col items-center justify-center gap-4">
-            <p className="text-center text-2xl text-white">
+            <p className="text-dark-900 text-center text-2xl">
               {session && (
                 <span>
                   {translations("auth.loggedInAs")} {session.user?.name}
@@ -31,13 +31,13 @@ export default async function Home() {
               <div className="flex flex-col items-center gap-4 sm:flex-row">
                 <Link
                   href="/login"
-                  className="rounded-full bg-white/10 px-10 py-3 font-semibold text-white no-underline transition hover:bg-white/20"
+                  className="bg-primary-500 hover:bg-primary-600 rounded-full px-10 py-3 font-semibold text-white no-underline transition"
                 >
                   {translations("common.signIn")}
                 </Link>
                 <Link
                   href="/signup"
-                  className="rounded-full bg-white/10 px-10 py-3 font-semibold text-white no-underline transition hover:bg-white/20"
+                  className="bg-primary-500 hover:bg-primary-600 rounded-full px-10 py-3 font-semibold text-white no-underline transition"
                 >
                   {translations("common.signUp")}
                 </Link>
@@ -45,7 +45,7 @@ export default async function Home() {
             ) : (
               <form>
                 <button
-                  className="rounded-full bg-white/10 px-10 py-3 font-semibold no-underline transition hover:bg-white/20"
+                  className="bg-primary-500 hover:bg-primary-600 rounded-full px-10 py-3 font-semibold text-white no-underline transition"
                   formAction={async () => {
                     "use server";
                     await auth.api.signOut({
@@ -61,6 +61,6 @@ export default async function Home() {
           </div>
         </div>
       </main>
-      </HydrateClient>
+    </HydrateClient>
   );
 }

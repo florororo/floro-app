@@ -4,7 +4,6 @@ import { Geist } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { TRPCReactProvider } from "~/trpc/react";
 
-
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
@@ -18,9 +17,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={geist.variable}>
-      <body>
-      <NextIntlClientProvider messages={messages}>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+      <body className="min-h-screen bg-neutral-500">
+        <NextIntlClientProvider messages={messages}>
+          <TRPCReactProvider>{children}</TRPCReactProvider>
         </NextIntlClientProvider>
       </body>
     </html>
