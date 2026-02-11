@@ -42,7 +42,7 @@ export function LocaleSwitcher() {
 
   return (
     <div className="flex items-center gap-2">
-      <label htmlFor="locale-select" className="text-sm text-white/80">
+      <label htmlFor="locale-select" className="text-dark-900 text-sm">
         Language:
       </label>
       <select
@@ -50,11 +50,15 @@ export function LocaleSwitcher() {
         value={currentLocale}
         onChange={(e) => handleLocaleChange(e.target.value as Locale)}
         disabled={isPending || isUpdating}
-        className="rounded-lg bg-white/10 px-3 py-1.5 text-white focus:bg-white/20 focus:ring-2 focus:ring-[hsl(280,100%,70%)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+        className="bg-secondary-500 focus:bg-secondary-600 focus:ring-secondary-500 rounded-lg px-3 py-1.5 text-white focus:ring-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
         aria-label="Select language"
       >
         {locales.map((locale) => (
-          <option key={locale} value={locale} className="bg-[#2e026d]">
+          <option
+            key={locale}
+            value={locale}
+            className="bg-secondary-50 text-dark-900"
+          >
             {locale.toUpperCase()}
           </option>
         ))}

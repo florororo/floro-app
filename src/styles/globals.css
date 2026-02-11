@@ -1,6 +1,122 @@
 @import "tailwindcss";
 
+/* App palette – single source of truth; change hex values here.
+   Shades (50–900) are derived automatically; 500 = base color. */
+:root {
+  --palette-primary: #60935d;
+  --palette-secondary: #e0607e;
+  --palette-dark: #14342b;
+  --palette-neutral: #f5ffc6;
+  --palette-disabled: #f8fcda;
+  --palette-error: #c6244a;
+}
+
 @theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+  --font-sans:
+    var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* primary (50 = lightest, 500 = base, 900 = darkest) */
+  --color-primary-50: color-mix(in srgb, var(--palette-primary) 8%, white);
+  --color-primary-100: color-mix(in srgb, var(--palette-primary) 18%, white);
+  --color-primary-200: color-mix(in srgb, var(--palette-primary) 35%, white);
+  --color-primary-300: color-mix(in srgb, var(--palette-primary) 52%, white);
+  --color-primary-400: color-mix(in srgb, var(--palette-primary) 72%, white);
+  --color-primary-500: var(--palette-primary);
+  --color-primary-600: color-mix(in srgb, var(--palette-primary) 82%, black);
+  --color-primary-700: color-mix(in srgb, var(--palette-primary) 65%, black);
+  --color-primary-800: color-mix(in srgb, var(--palette-primary) 48%, black);
+  --color-primary-900: color-mix(in srgb, var(--palette-primary) 32%, black);
+
+  /* secondary */
+  --color-secondary-50: color-mix(in srgb, var(--palette-secondary) 8%, white);
+  --color-secondary-100: color-mix(
+    in srgb,
+    var(--palette-secondary) 18%,
+    white
+  );
+  --color-secondary-200: color-mix(
+    in srgb,
+    var(--palette-secondary) 35%,
+    white
+  );
+  --color-secondary-300: color-mix(
+    in srgb,
+    var(--palette-secondary) 52%,
+    white
+  );
+  --color-secondary-400: color-mix(
+    in srgb,
+    var(--palette-secondary) 72%,
+    white
+  );
+  --color-secondary-500: var(--palette-secondary);
+  --color-secondary-600: color-mix(
+    in srgb,
+    var(--palette-secondary) 82%,
+    black
+  );
+  --color-secondary-700: color-mix(
+    in srgb,
+    var(--palette-secondary) 65%,
+    black
+  );
+  --color-secondary-800: color-mix(
+    in srgb,
+    var(--palette-secondary) 48%,
+    black
+  );
+  --color-secondary-900: color-mix(
+    in srgb,
+    var(--palette-secondary) 32%,
+    black
+  );
+
+  /* dark */
+  --color-dark-50: color-mix(in srgb, var(--palette-dark) 8%, white);
+  --color-dark-100: color-mix(in srgb, var(--palette-dark) 18%, white);
+  --color-dark-200: color-mix(in srgb, var(--palette-dark) 35%, white);
+  --color-dark-300: color-mix(in srgb, var(--palette-dark) 52%, white);
+  --color-dark-400: color-mix(in srgb, var(--palette-dark) 72%, white);
+  --color-dark-500: var(--palette-dark);
+  --color-dark-600: color-mix(in srgb, var(--palette-dark) 82%, black);
+  --color-dark-700: color-mix(in srgb, var(--palette-dark) 65%, black);
+  --color-dark-800: color-mix(in srgb, var(--palette-dark) 48%, black);
+  --color-dark-900: color-mix(in srgb, var(--palette-dark) 32%, black);
+
+  /* neutral */
+  --color-neutral-50: color-mix(in srgb, var(--palette-neutral) 8%, white);
+  --color-neutral-100: color-mix(in srgb, var(--palette-neutral) 18%, white);
+  --color-neutral-200: color-mix(in srgb, var(--palette-neutral) 35%, white);
+  --color-neutral-300: color-mix(in srgb, var(--palette-neutral) 52%, white);
+  --color-neutral-400: color-mix(in srgb, var(--palette-neutral) 72%, white);
+  --color-neutral-500: var(--palette-neutral);
+  --color-neutral-600: color-mix(in srgb, var(--palette-neutral) 82%, black);
+  --color-neutral-700: color-mix(in srgb, var(--palette-neutral) 65%, black);
+  --color-neutral-800: color-mix(in srgb, var(--palette-neutral) 48%, black);
+  --color-neutral-900: color-mix(in srgb, var(--palette-neutral) 32%, black);
+
+  /* disabled */
+  --color-disabled-50: color-mix(in srgb, var(--palette-disabled) 8%, white);
+  --color-disabled-100: color-mix(in srgb, var(--palette-disabled) 18%, white);
+  --color-disabled-200: color-mix(in srgb, var(--palette-disabled) 35%, white);
+  --color-disabled-300: color-mix(in srgb, var(--palette-disabled) 52%, white);
+  --color-disabled-400: color-mix(in srgb, var(--palette-disabled) 72%, white);
+  --color-disabled-500: var(--palette-disabled);
+  --color-disabled-600: color-mix(in srgb, var(--palette-disabled) 82%, black);
+  --color-disabled-700: color-mix(in srgb, var(--palette-disabled) 65%, black);
+  --color-disabled-800: color-mix(in srgb, var(--palette-disabled) 48%, black);
+  --color-disabled-900: color-mix(in srgb, var(--palette-disabled) 32%, black);
+
+  /* error */
+  --color-error-50: color-mix(in srgb, var(--palette-error) 8%, white);
+  --color-error-100: color-mix(in srgb, var(--palette-error) 18%, white);
+  --color-error-200: color-mix(in srgb, var(--palette-error) 35%, white);
+  --color-error-300: color-mix(in srgb, var(--palette-error) 52%, white);
+  --color-error-400: color-mix(in srgb, var(--palette-error) 72%, white);
+  --color-error-500: var(--palette-error);
+  --color-error-600: color-mix(in srgb, var(--palette-error) 82%, black);
+  --color-error-700: color-mix(in srgb, var(--palette-error) 65%, black);
+  --color-error-800: color-mix(in srgb, var(--palette-error) 48%, black);
+  --color-error-900: color-mix(in srgb, var(--palette-error) 32%, black);
 }

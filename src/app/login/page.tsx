@@ -43,10 +43,10 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] px-4 py-16">
+    <main className="flex min-h-screen flex-col items-center justify-center px-4 py-16">
       <div className="w-full max-w-md">
-        <div className="rounded-xl bg-white/10 p-8 shadow-lg">
-          <h1 className="mb-8 text-center text-4xl font-extrabold tracking-tight text-white">
+        <div className="bg-primary-500 rounded-xl p-8 shadow-lg">
+          <h1 className="text-dark-500 mb-8 text-center text-4xl font-extrabold tracking-tight">
             {translations("title")}
           </h1>
 
@@ -65,7 +65,7 @@ export default function LoginPage() {
                 onChange={(event) => setEmail(event.target.value)}
                 required
                 disabled={isLoading}
-                className="w-full rounded-lg bg-white/10 px-4 py-3 text-white placeholder:text-white/50 focus:bg-white/20 focus:ring-2 focus:ring-[hsl(280,100%,70%)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="text-dark-900 placeholder:text-dark-500 focus:ring-primary-500 w-full rounded-lg bg-neutral-300 px-4 py-3 focus:bg-neutral-200 focus:ring-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                 placeholder={translations("emailPlaceholder")}
                 autoComplete="email"
               />
@@ -85,14 +85,14 @@ export default function LoginPage() {
                 onChange={(event) => setPassword(event.target.value)}
                 required
                 disabled={isLoading}
-                className="w-full rounded-lg bg-white/10 px-4 py-3 text-white placeholder:text-white/50 focus:bg-white/20 focus:ring-2 focus:ring-[hsl(280,100%,70%)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="text-dark-900 placeholder:text-dark-500 focus:ring-primary-500 w-full rounded-lg bg-neutral-300 px-4 py-3 focus:bg-neutral-200 focus:ring-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                 placeholder={translations("passwordPlaceholder")}
                 autoComplete="current-password"
               />
             </div>
 
             {error && (
-              <div className="rounded-lg border border-red-500/50 bg-red-500/20 px-4 py-3 text-sm text-red-200">
+              <div className="border-error-500/50 bg-error-500/20 text-error-200 rounded-lg border px-4 py-3 text-sm">
                 {error}
               </div>
             )}
@@ -100,7 +100,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full rounded-full bg-white/10 px-6 py-3 font-semibold text-white transition hover:bg-white/20 focus:ring-2 focus:ring-[hsl(280,100%,70%)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+              className="focus:ring-secondary-500 w-full rounded-full bg-white/10 px-6 py-3 font-semibold text-white transition hover:bg-white/20 focus:ring-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
             >
               {isLoading ? translations("submitting") : translations("submit")}
             </button>
@@ -111,7 +111,7 @@ export default function LoginPage() {
               {translations("noAccount")}{" "}
               <Link
                 href="/signup"
-                className="font-semibold text-[hsl(280,100%,70%)] hover:underline"
+                className="text-secondary-500 font-semibold hover:underline"
               >
                 {translations("signUpLink")}
               </Link>
@@ -122,4 +122,3 @@ export default function LoginPage() {
     </main>
   );
 }
-
