@@ -4,8 +4,8 @@ model Session {
     token     String
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
-    ipAddress String? //@db.Text
-    userAgent String? //@db.Text
+    ipAddress String?  @db.Text
+    userAgent String?  @db.Text
     userId    String
     user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
