@@ -59,6 +59,47 @@ export default async function Home() {
               </form>
             )}
           </div>
+
+          {/* Color palette test – remove when done */}
+          <section className="border-dark-200 w-full max-w-md rounded-2xl border p-6">
+            <h2 className="text-dark-900 mb-4 font-semibold">
+              Color palette test
+            </h2>
+            <div className="bg-primary-500 flex flex-col gap-4 rounded-xl p-4">
+              <input
+                type="text"
+                placeholder="neutral-200 input"
+                className="text-dark-900 placeholder:text-dark-500 rounded-lg border border-neutral-400 bg-neutral-200 px-3 py-2"
+              />
+              <div
+                role="alert"
+                className="bg-error-100 text-error-800 border-error-300 rounded-lg border px-3 py-2 text-sm"
+              >
+                Error alert — something went wrong.
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  className="bg-secondary-500 hover:bg-secondary-600 rounded-lg px-4 py-2 font-medium text-white"
+                >
+                  Secondary
+                </button>
+                <button
+                  type="button"
+                  className="bg-dark-500 hover:bg-dark-600 rounded-lg px-4 py-2 font-medium text-white"
+                >
+                  Dark
+                </button>
+                <button
+                  type="button"
+                  disabled
+                  className="bg-disabled-500 text-dark-600 cursor-not-allowed rounded-lg px-4 py-2 font-medium opacity-70"
+                >
+                  Disabled
+                </button>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </HydrateClient>
